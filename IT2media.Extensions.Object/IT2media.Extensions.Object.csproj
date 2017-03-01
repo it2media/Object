@@ -6,16 +6,21 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EC8A379D-24E4-467F-BA62-2318C69A9C85}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
     <RootNamespace>Object</RootNamespace>
-    <AssemblyName>Object</AssemblyName>
+    <AssemblyName>IT2media.Extensions.Object</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
-    <PackageId>Object</PackageId>
+    <PackageId>IT2media.Extensions.Object</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>malzma</Authors>
     <Description>Extensions for System.Object</Description>
+    <PackOnBuild>true</PackOnBuild>
+    <Owners>malzma</Owners>
+    <Summary>Dump method for all object like LINQPad dumps an intended JSON to Debug.WriteLine</Summary>
+    <Title>IT2media.Extensions.Object</Title>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>IT2media.Extensions.Object.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
