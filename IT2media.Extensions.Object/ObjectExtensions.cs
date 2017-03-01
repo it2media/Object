@@ -3,6 +3,7 @@ using System.Collections;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace IT2media.Extensions.Object
 {
@@ -16,7 +17,21 @@ namespace IT2media.Extensions.Object
 
 	public static class ObjectExtensions
 	{
-		public static string Dump(this object o)
+		public static T Dump<T>(this T o)
+		{
+			try
+			{
+				string json = JsonConvert.SerializeObject(o, Formatting.Indented);
+				Debug.WriteLine(json);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex);
+			}
+			return o;
+		}
+
+		public static string Dump2(this object o)
 		{
 			string s = o.ToString();
 
