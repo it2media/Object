@@ -25,18 +25,31 @@ namespace IT2media.Extensions.Object.NUnit
 		} 
 
 		[Test()]
-		public void TestCase()
+		public async void TestCase()
 		{
-			List<string> list = new List<string>();
+			try
+			{
+				List<string> list = new List<string>();
 
-			list.Add("test1");
-			list.Add("test2");
+				list.Add("test1");
+				list.Add("test2");
 
-			list.Dump();
+				list.Dump();
 
-			MyPropertyTestClass testClass = new MyPropertyTestClass();
+				MyPropertyTestClass testClass = new MyPropertyTestClass();
 
-			testClass.Dump();
+				testClass.Dump();
+
+				var file = testClass.DumpToFile("testClass.json");
+
+				string x = System.IO.File.ReadAllText(file.Path);
+
+				Assert.IsTrue(!string.IsNullOrWhiteSpace(x));
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex);
+			}
 		}
 	}
 }
