@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.props')" />
   <Import Project="..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -21,6 +22,8 @@
     <Title>IT2media.Extensions.Object</Title>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>IT2media.Extensions.Object.snk</AssemblyOriginatorKeyFile>
+    <PackageIconUrl>https://raw.githubusercontent.com/it2media/Home/master/Logo_IT2media_2015_64x64.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/it2media/Object</PackageProjectUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="IT2media.Extensions.Object.snk" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -51,4 +55,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.targets')" />
 </Project>
