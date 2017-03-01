@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT2media.Extensions.Object", "IT2media.Extensions.Object\IT2media.Extensions.Object.csproj", "{EC8A379D-24E4-467F-BA62-2318C69A9C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT2media.Extensions.Object.NUnit", "IT2media.Extensions.Object.NUnit\IT2media.Extensions.Object.NUnit.csproj", "{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC8A379D-24E4-467F-BA62-2318C69A9C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8A379D-24E4-467F-BA62-2318C69A9C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8A379D-24E4-467F-BA62-2318C69A9C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8A379D-24E4-467F-BA62-2318C69A9C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
