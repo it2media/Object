@@ -12,7 +12,7 @@ namespace IT2media.Extensions.Object
 	public static class ObjectExtensions
 	{
 		/// <summary>
-		/// Dump the specified obj to Debug
+		/// Dumps the specified object to Debug
 		/// </summary>
 		/// <returns>The object or a copy of the reference type.</returns>
 		/// <param name="obj">Object.</param>
@@ -33,23 +33,35 @@ namespace IT2media.Extensions.Object
 		}
 
 		/// <summary>
-		/// Dumps to a UTF8 ecnoded file.
+		/// Dumps to a UTF8 encoded file.
 		/// </summary>
 		/// <returns>The object or a copy of the reference type.</returns>
 		/// <param name="obj">Object.</param>
 		/// <param name="path">Path.</param>
 		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static IFile DumpToFile<T>(this T obj, string path)
+		public async static Task<IFile> DumpToFileAsync<T>(this T obj, string filename, string directory = null)
 		{
 			IFile file;
+			IFolder folder;
 
 			try
 			{
 				string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
 
-				file = FileSystem.Current.LocalStorage.CreateFileAsync(path, CreationCollisionOption.ReplaceExisting).Result;
+				var storage = FileSystem.Current.RoamingStorage;
 
-				file.WriteAllTextAsync(json).Wait();
+				if (directory != null)
+				{
+					folder = await storage.CreateFolderAsync(directory, CreationCollisionOption.OpenIfExists);
+				}
+				else
+				{
+					folder = storage;
+				}
+
+				file = await folder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+
+				await file.WriteAllTextAsync(json);
 
 				return file;
 			}

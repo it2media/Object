@@ -9,19 +9,19 @@ namespace IT2media.Extensions.Object.NUnit
 	[TestFixture()]
 	public class Test
 	{
-		public class MyPropertyTestClass
+		public class SampleClass
 		{
-			public string MyProperty
+			public string StringProperty
 			{
 				get;
 				set;
-			} = "MyPropertyTest2";
+			}
 
-			public int MyProperty2
+			public int IntProperty
 			{
 				get;
 				set;
-			} = 4711;
+			}
 		} 
 
 		[Test()]
@@ -31,20 +31,20 @@ namespace IT2media.Extensions.Object.NUnit
 			{
 				List<string> list = new List<string>();
 
-				list.Add("test1");
-				list.Add("test2");
+				list.Add("item1");
+				list.Add("item2");
 
 				list.Dump();
 
-				MyPropertyTestClass testClass = new MyPropertyTestClass();
+				SampleClass instance = new SampleClass();
 
-				testClass.Dump();
+				instance.Dump();
 
-				var file = testClass.DumpToFile("testClass.json");
+				var file = await instance.DumpToFileAsync("sampleClass.json");
 
-				string x = System.IO.File.ReadAllText(file.Path);
+				string fileContent = System.IO.File.ReadAllText(file.Path);
 
-				Assert.IsTrue(!string.IsNullOrWhiteSpace(x));
+				Assert.IsTrue(!string.IsNullOrWhiteSpace(fileContent));
 			}
 			catch (Exception ex)
 			{
