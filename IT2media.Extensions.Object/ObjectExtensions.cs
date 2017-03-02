@@ -48,7 +48,7 @@ namespace IT2media.Extensions.Object
 			{
 				string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
 
-				var storage = FileSystem.Current.RoamingStorage;
+				var storage = FileSystem.Current.LocalStorage;
 
 				if (directory != null)
 				{

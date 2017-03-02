@@ -1,9 +1,12 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT2media.Extensions.Object", "IT2media.Extensions.Object\IT2media.Extensions.Object.csproj", "{EC8A379D-24E4-467F-BA62-2318C69A9C85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT2media.Extensions.Object.NUnit", "IT2media.Extensions.Object.NUnit\IT2media.Extensions.Object.NUnit.csproj", "{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT2media.Extensions.Object.ConsoleTest", "IT2media.Extensions.Object.ConsoleTest\IT2media.Extensions.Object.ConsoleTest.csproj", "{8B9DD82F-0B5C-4E1F-AF39-993CA59D01CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,5 +22,12 @@ Global
 		{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{406DCFC4-DDC2-4438-8D1D-E1EDA1A3834C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9DD82F-0B5C-4E1F-AF39-993CA59D01CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9DD82F-0B5C-4E1F-AF39-993CA59D01CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9DD82F-0B5C-4E1F-AF39-993CA59D01CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9DD82F-0B5C-4E1F-AF39-993CA59D01CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

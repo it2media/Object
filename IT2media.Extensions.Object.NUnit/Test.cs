@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace IT2media.Extensions.Object.NUnit
 {
@@ -25,7 +26,7 @@ namespace IT2media.Extensions.Object.NUnit
 		} 
 
 		[Test()]
-		public async void TestCase()
+		public async Task TestCase()
 		{
 			try
 			{
