@@ -6,40 +6,49 @@ So I made this little extension.
 
 Dumps any object with .Dump() with Debug.WriteLine() as intended JSON with JSON.NET
 
-# Sample
+## Sample
 
 Assume you have a object like this class:
 
-```
-public class MyPropertyTestClass
-		{
-			public string MyProperty
-			{
-				get;
-				set;
-			} = "MyPropertyTest2";
+```cs
+public class SampleClass
+{
+	public string StringProperty
+	{
+		get;
+		set;
+	}
 
-			public int MyProperty2
-			{
-				get;
-				set;
-			} = 4711;
-		} 
+	public int IntProperty
+	{
+		get;
+		set;
+	}
+} 
 ```
     
 so if you Dump() this like
 
 ```
-MyPropertyTestClass instance = new MyPropertyTestClass();
+SampleClass instance = new SampleClass();
 
 instance.Dump();
 ```
 
 this is the output to your Debug console:
 
-```
+```js
 {
-  "MyProperty": "MyPropertyTest2",
-  "MyProperty2": 4711
+  "StringProperty": null,
+  "IntProperty": 0
 }
+```
+
+## Redirect Debug to Console
+
+On platforms where the *Console* is available you can redirect the *Debug* output to the console with:
+
+```cs
+TextWriterTraceListener[] listeners = { new TextWriterTraceListener(Console.Out) };
+Debug.Listeners.AddRange(listeners);
 ```
