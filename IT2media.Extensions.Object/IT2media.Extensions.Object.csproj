@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <PackageId>IT2media.Extensions.Object</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <Authors>malzma</Authors>
     <Description>Extensions for System.Object</Description>
     <PackOnBuild>true</PackOnBuild>
