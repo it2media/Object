@@ -13,11 +13,11 @@ namespace IT2media.Extensions.Object.ConsoleTest
         {
             SampleClass instance = new SampleClass();
 
-				instance.Dump();
+            instance.Dump();
 
-				var file = instance.DumpToFileAsync("sampleClass.json", "MyDirectory/SubDir").Result;
+            var file = instance.DumpToFileAsync("sampleClass.json", "MyDirectory/SubDir").Result;
 
-				string fileContent = System.IO.File.ReadAllText(file.Path);
+            string fileContent = System.IO.File.ReadAllText(file.Path);
         }
     }
 }
