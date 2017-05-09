@@ -12,20 +12,17 @@ namespace IT2media.Extensions.Object.Test
         [Fact]
         public void DumpToFileTest()
         {
-            List<string> list = new List<string>();
-
-            list.Add("item1");
-            list.Add("item2");
-
+            var list = new List<string> {"item1", "item2"};
+            
             list.Dump();
 
-            SampleClass instance = new SampleClass();
+            var instance = new SampleClass();
 
             instance.Dump();
 
             var file = instance.DumpToFileAsync("sampleClass.json").Result;
 
-            string fileContent = System.IO.File.ReadAllText(file.Path);
+            var fileContent = System.IO.File.ReadAllText(file.Path);
 
             Console.WriteLine(file.Path);
 

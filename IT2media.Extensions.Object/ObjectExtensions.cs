@@ -21,7 +21,7 @@ namespace IT2media.Extensions.Object
         {
             try
             {
-                string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+                var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
                 Debug.WriteLine(json);
             }
             catch (Exception ex)
@@ -36,20 +36,19 @@ namespace IT2media.Extensions.Object
         /// Dumps to a UTF8 encoded file.
         /// </summary>
         /// <returns>The object or a copy of the reference type.</returns>
-        /// <param name="obj">Object.</param>
-        /// <param name="path">Path.</param>
+        /// <param name="obj"></param>
+        /// <param name="filename"></param>
+        /// <param name="directory"></param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public async static Task<IFile> DumpToFileAsync<T>(this T obj, string filename, string directory = null)
+        public static async Task<IFile> DumpToFileAsync<T>(this T obj, string filename, string directory = null)
         {
-            IFile file;
-            IFolder folder;
-
             try
             {
-                string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+                var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
 
                 var storage = FileSystem.Current.LocalStorage;
 
+                IFolder folder;
                 if (directory != null)
                 {
                     folder = await storage.CreateFolderAsync(directory, CreationCollisionOption.OpenIfExists);
@@ -59,7 +58,7 @@ namespace IT2media.Extensions.Object
                     folder = storage;
                 }
 
-                file = await folder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+                var file = await folder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
 
                 await file.WriteAllTextAsync(json);
 
