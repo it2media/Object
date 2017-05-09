@@ -8,13 +8,18 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Markus Malz</Authors>
     <Company>IT2media GmbH &amp; Co. KG</Company>
-    <Description>Dump method for all objects. Like LINQPad the method dumps an object in its hierarchical structure, here as intended JSON to Debug.WriteLine</Description>
-    <AssemblyVersion>1.0.4.0</AssemblyVersion>
-    <FileVersion>1.0.4.0</FileVersion>
-    <Version>1.0.4</Version>
+    <Description>Dump method for all objects. Like LINQPad the method dumps an object in its hierarchical structure, here as intended JSON to Debug.WriteLine.
+
+DumpToFile and DumpToFileAsync are writing (in windows 10 at least) to %USERPROFILE%\AppData\Local
+into a subfolder of your company/programname or programname/programname</Description>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <FileVersion>1.0.5.0</FileVersion>
+    <Version>1.0.5</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/it2media/Home/master/Logo_IT2media_2015_64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/it2media/Object</PackageProjectUrl>
     <Owners>malzma</Owners>
+    <PackageReleaseNotes>
+</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

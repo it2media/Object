@@ -52,3 +52,10 @@ On platforms where the *Console* is available you can redirect the *Debug* outpu
 TextWriterTraceListener[] listeners = { new TextWriterTraceListener(Console.Out) };
 Debug.Listeners.AddRange(listeners);
 ```
+
+## DumpToFile
+
+DumpToFile and DumpToFileAsync are using PCLStorage for writing and so are writing to (in windows 10 at least) to %USERPROFILE%\AppData\Local
+into a subfolder of your company/programname or programname/programname if no company is entered
+
+If filename is null there is one generated with DateTime.Now.Ticks + ".json" extension.
