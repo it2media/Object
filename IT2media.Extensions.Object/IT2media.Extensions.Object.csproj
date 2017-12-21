@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net46</TargetFrameworks>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>IT2media.Extensions.Object.snk</AssemblyOriginatorKeyFile>
-    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Markus Malz</Authors>
     <Company>IT2media GmbH &amp; Co. KG</Company>
@@ -12,9 +11,9 @@
 
 DumpToFile and DumpToFileAsync are writing (in windows 10 at least) to %USERPROFILE%\AppData\Local
 into a subfolder of your company/programname or programname/programname</Description>
-    <AssemblyVersion>1.0.5.0</AssemblyVersion>
-    <FileVersion>1.0.5.0</FileVersion>
-    <Version>1.0.5</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/it2media/Home/master/Logo_IT2media_2015_64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/it2media/Object</PackageProjectUrl>
     <Owners>malzma</Owners>
