@@ -17,9 +17,13 @@
       This is because the original implementation uses System.Windows.Forms.Application.LocalUserAppDataPath but this is very difficult to extract, 
       see: https://referencesource.microsoft.com/#System.Windows.Forms/winforms/Managed/System/WinForms/Application.cs
     </Summary>
-    <AssemblyVersion>2.0.2.0</AssemblyVersion>
-    <FileVersion>2.0.2.0</FileVersion>
-    <Version>2.0.2</Version>
+    
+	<AssemblyVersion>2.0.2.0</AssemblyVersion> <!-- do not change these anymore while deploying major version 2.* -->
+    <FileVersion>2.0.2.0</FileVersion> <!-- do not change these anymore while deploying major version 2.* -->
+    
+	<Version>2.0.2</Version>
+	
+	
     <PackageIconUrl>https://raw.githubusercontent.com/it2media/Home/master/Logo_IT2media_2015_64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/it2media/Object</PackageProjectUrl>
     <Owners>malzma</Owners>
