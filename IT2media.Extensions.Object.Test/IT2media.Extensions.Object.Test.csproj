@@ -33,10 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IT2media.Extensions.Object, Version=2.0.1.0, Culture=neutral, PublicKeyToken=408933ce12a743a0, processorArchitecture=MSIL">
-      <HintPath>..\packages\IT2media.Extensions.Object.2.0.1\lib\net46\IT2media.Extensions.Object.dll</HintPath>
+    <Reference Include="IT2media.Extensions.Object, Version=2.0.2.0, Culture=neutral, PublicKeyToken=408933ce12a743a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\IT2media.Extensions.Object.2.0.2\lib\net46\IT2media.Extensions.Object.dll</HintPath>
     </Reference>
-    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64" />
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\net45\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\net45\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
