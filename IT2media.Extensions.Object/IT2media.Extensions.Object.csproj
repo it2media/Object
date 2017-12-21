@@ -7,20 +7,25 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Markus Malz</Authors>
     <Company>IT2media GmbH &amp; Co. KG</Company>
-    <Description>
-      Dump method for all objects. Like LINQPad the method dumps an object in its hierarchical structure, here as intended JSON to Debug.WriteLine.
-
+    <Description>Dump method for all objects. Like LINQPad the method dumps an object in its hierarchical structure, here as intended JSON to Debug.WriteLine.</Description>
+    <Summary>
       DumpToFile and DumpToFileAsync are writing (in windows 10 at least) to %USERPROFILE%\AppData\Local
       into a subfolder of your company/programname or programname/programname
-    </Description>
+
+      For .NET Core 2.0 the standard output directory is the applications currently set directory, but you can specify your own (even the full path) if you want. 
+      
+      This is because the original implementation uses System.Windows.Forms.Application.LocalUserAppDataPath but this is very difficult to extract, 
+      see: https://referencesource.microsoft.com/#System.Windows.Forms/winforms/Managed/System/WinForms/Application.cs
+    </Summary>
     <AssemblyVersion>2.0.1.0</AssemblyVersion>
     <FileVersion>2.0.1.0</FileVersion>
     <Version>2.0.1</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/it2media/Home/master/Logo_IT2media_2015_64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/it2media/Object</PackageProjectUrl>
     <Owners>malzma</Owners>
-    <PackageReleaseNotes>
-    </PackageReleaseNotes>
+    <PackageReleaseNotes>Migrated to .NET Standard 2.0 and now multitargets net46 and netstandard2.0</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/it2media/Object.git</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
