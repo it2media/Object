@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
+using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PCLStorage;
+using FileAccess = PCLStorage.FileAccess;
 
 namespace IT2media.Extensions.Object
 {
-    public static class ObjectExtensions
+    public static partial class ObjectExtensions
     {
         /// <summary>
         /// Dumps the specified object to Debug
@@ -57,13 +62,14 @@ namespace IT2media.Extensions.Object
         {
             try
             {
+
                 if (filename == null)
                 {
                     filename = DateTime.Now.Ticks + ".json";
                 }
 
                 var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-
+#if NET46
                 var storage = FileSystem.Current.LocalStorage;
 
                 IFolder folder;
@@ -82,6 +88,22 @@ namespace IT2media.Extensions.Object
                 await file.WriteAllTextAsync(json);
 
                 return file;
+#else
+                return await Task.Run(() =>
+                {
+                    var fi = new FileInfo(filename);
+
+                    var di = directory != null ? new DirectoryInfo(directory) : fi.Directory;
+
+                    var path = Path.Combine(di.FullName, fi.Name);
+
+                    IFile file = new CoreFile(path);
+
+                    File.WriteAllText(path, json, Encoding.UTF8);
+
+                    return file;
+                });
+#endif
             }
             catch (Exception ex)
             {
